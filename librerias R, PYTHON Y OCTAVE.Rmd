@@ -1,0 +1,47 @@
+---
+title: "Proyecto1"
+author: "Francisco Guzman"
+date: "14/9/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+#librerias
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(engine.path = list(octave = 'C://Program Files//GNU Octave//Octave-6.3.0//mingw64//bin//octave-cli-6.3.0.exe'))
+library(magic)
+```
+
+# Prueba de cuadrados magicos
+```{r}
+
+magic(6)
+```
+
+```{python}
+import numpy as np
+x = np.abs(10)
+print(x)
+```
+
+Octave
+```{octave}
+z1 = complex(1,2)
+class(z1)
+```
+
+## Pass a vector to sum, and it will add the elements together.
+sum(1:5)
+
+## Pass several numbers to sum, and it also adds the elements.
+sum(1, 2, 3, 4, 5)
+
+## In fact, you can pass vectors into several arguments, and everything gets added.
+sum(1:2, 3:5)
+
+## If there are missing values, the sum is unknown, i.e., also missing, ....
+sum(1:5, NA)
+## ... unless  we exclude missing values explicitly:
+sum(1:5, NA, na.rm = TRUE)
+

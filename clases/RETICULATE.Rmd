@@ -1,0 +1,41 @@
+---
+title: "Reticulate"
+author: "Francisco Guzman"
+date: "19/9/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+```{r}
+library(openxlsx)
+library(ggthemes)
+library(ggplot2)
+library(DataExplorer)
+datos <- read.xlsx("C:/Users/USER/Documents/data2.xlsx")
+str(datos) ##conociendo los datos.
+head(datos,n = 20) ##muestra
+ts.plot(datos$MONETARIO) ##grafico
+
+##ploteo con data explorer
+plot_missing(datos)
+##editar datos
+fix(datos)
+
+#correlaciones
+plot_correlation(datos)
+
+
+```
+
+
+
+
+
+
+
